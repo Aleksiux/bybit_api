@@ -139,9 +139,12 @@ venv.bak/
 /site
 
 # mypy
+config.py
+test.py
 .mypy_cache/
 .dmypy.json
 dmypy.json
+*.pkl
 
 # Pyre type checker
 .pyre/
