@@ -1,7 +1,7 @@
 import pickle
 import requests
 import pandas as pd
-from config import API_KEY, SECRET
+from config import API_KEY, API_SECRET
 
 
 class BybitAPI:
@@ -56,9 +56,6 @@ class BybitAPI:
 
 
 # API KEY and API SECRET come from config file.
-API_KEY = API_KEY
-API_SECRET = SECRET
-
 bybit_api = BybitAPI(API_KEY, API_SECRET)
 
 instrument_info = bybit_api.get_instrument_info('', 100)
@@ -90,5 +87,5 @@ save_object_to_file('kline_data.pkl', df_kline_data)
 instruments_info_loaded = load_object_from_file('instruments_info.pkl')
 kline_data_loaded = load_object_from_file('kline_data.pkl')
 
-print(instruments_info_loaded.to_string())
-print(kline_data_loaded.to_string())
+# print(instruments_info_loaded.to_string())
+# print(kline_data_loaded.to_string())
